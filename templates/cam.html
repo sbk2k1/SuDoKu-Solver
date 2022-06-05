@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="stylesheet" type="text/css" href="../static/stylecam.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Upload your SuDoKu Image</h1>
+    </div>
+    <div class="main">
+        <img src="{{ url_for('click') }}" width="450px" height="450px"/>
+        <button><a href="/image">Click to Save Image</a></button>
+    </div>
+</body>
+</html>
