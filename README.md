@@ -24,8 +24,8 @@ _Webcam_
 
 This Project is accompanied by a video tutorial available on YouTube. Watch the video below to get a visual walkthrough:
 
-[<img src="https://img.youtube.com/vi/nEYiJ67rBKc/hqdefault.jpg" 
-/>](https://www.youtube.com/watch?v=nEYiJ67rBKc)
+[<img src="https://img.youtube.com/vi/lUnCptNHJu8/hqdefault.jpg" 
+/>](https://youtu.be/lUnCptNHJu8)
 
 ## Author
 
