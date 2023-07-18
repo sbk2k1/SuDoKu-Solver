@@ -10,19 +10,16 @@ To install Sudoku Solver, follow these steps:
 
 1. Clone Repositories.
 2. Install Dependencies. (keras, tensorflow, flask)
-3. Download any model following the steps below.
-4. Rename the model to exp_det.h5
-
-## Downloads
-
-You can download any of the models from here:
-
-- Donwload model from here
+3. Start up app.py
 
 ## Screenshot
 
 ![Screenshot 1](./static/Capture.PNG)
 *App on Startup*
+
+![Screenshot 2](./static/Capture.PNG)
+*Webcam*
+
 
 ## Video
 
