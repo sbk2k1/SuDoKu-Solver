@@ -15,16 +15,14 @@ To install Sudoku Solver, follow these steps:
 ## Screenshot
 
 ![Screenshot 1](./static/Capture.PNG)
-*App on Startup*
+_App on Startup_
 
-![Screenshot 2](./static/Capture.PNG)
-*Webcam*
-
+![Screenshot 2](./static/webcam.PNG)
+_Webcam_
 
 ## Video
 
 This Project is accompanied by a video tutorial available on YouTube. Watch the video below to get a visual walkthrough:
-
 
 [<img src="https://img.youtube.com/vi/nEYiJ67rBKc/hqdefault.jpg" 
 />](https://www.youtube.com/watch?v=nEYiJ67rBKc)
