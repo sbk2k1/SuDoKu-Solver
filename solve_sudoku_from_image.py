@@ -35,6 +35,7 @@ def reframe(points):
     return points_new
 
 def splitcells(img):
+    # print("image is ->", img)
     rows = np.vsplit(img,9)
     boxes = []
     for r in rows:
@@ -79,6 +80,7 @@ def get_grid(puzzle):
     puzzle = cv2.resize(puzzle, (450,450))
     # Preprocessing Puzzle 
     su_puzzle = preprocess(puzzle)
+    su_imagewrap = ""
 
     # Finding the outline of the sudoku puzzle in the image
     #su_contour_1= su_puzzle.copy()

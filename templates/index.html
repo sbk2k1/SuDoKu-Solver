@@ -40,15 +40,57 @@
                 var dataURL = reader.result; 
                 $("#display-img").attr("src", dataURL);
                 base64Image = dataURL.replace("data:image/png;base64,", ""); 
-                console.log(base64Image);
             }
             reader.readAsDataURL($("#image")[0].files[0]); 
             $("#prediction-img").text("...");
         })
         $("#pred-btn").click(function (event) {
             var message = { image: base64Image }
-            $.post("http://127.0.0.1:5000/solve", JSON.stringify(message), function (response) {
-                $("#prediction-img").text(response.predictionImg);
+            $.post("http://localhost:5000/solve", JSON.stringify(message), function (response) {
+                // $("#prediction-img").text(response.predictionImg);
+
+                // insert into the prediction-img div a grid of numbers received from the server
+                // in the form of a 2 d array. the 2 d array is converted from a string and then
+                // parsed into an int
+
+                var predictionImg = response.predictionImg;
+                // convert the string to a 2d array
+                
+                // remove first and last characters from the string
+                predictionImg = predictionImg.substring(1, predictionImg.length - 1);
+
+                // split the string into an array of strings
+                predictionImg = predictionImg.split("]");
+
+                // remove the last element from the array
+                predictionImg.pop();
+
+                console.log(predictionImg);
+
+                // discard items from front of array till a "[" is found
+                
+                for (var i = 0; i < predictionImg.length; i++) {
+                    string = predictionImg[i].split("[");
+
+                    if(string.length > 1){
+                        predictionImg[i] = string[1];
+                    }
+                    else{
+                        predictionImg[i] = string[0];
+                    }
+                }
+                
+
+
+                // print each line after each other
+                var output = "";
+                for (var i = 0; i < predictionImg.length; i++) {
+                    output += predictionImg[i] + "<br>";
+                }
+                $("#prediction-img").html(output);
+
+
+
             })
         }) </script>
 </body>

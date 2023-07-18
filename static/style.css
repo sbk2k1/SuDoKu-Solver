@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #44f9ff;
   overflow-y: scroll;
 }
 

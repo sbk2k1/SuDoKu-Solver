@@ -43,6 +43,7 @@ def predict_img():
     decoded = base64.b64decode(encoded)
     image = Image.open(io.BytesIO(decoded))
     #save image using opencv
+    image = image.convert("RGB")
     cv2.imwrite("SudokuImage.png", np.array(image))
     pred = solve_sudoku_from_image.solve_sudoku("SudokuImage.png")
     response = {
